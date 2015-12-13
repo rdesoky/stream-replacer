@@ -1,11 +1,12 @@
-# Stream-Replacer
+# Stream-Str-Replace
 
 A Stream transformer and command line utility to find and replace strings in streams.
 
 
 ### Sample usage:
+
 ```javascript
-process.stdin.pipe( require("stream-replacer")(find, replace) ).pipe(process.stdout);
+process.stdin.pipe( require("stream-str-replace")(find, replace) ).pipe(process.stdout);
 
 ```
 
@@ -15,10 +16,8 @@ process.stdin.pipe( require("stream-replacer")(find, replace) ).pipe(process.std
 
 ### Command line tool (strepl)
 
-
-
 ```
->npm install stream-replacer -g
+>npm install stream-str-replace -g
 
 >type myFile.txt | strepl find_text replace_text > myNewFile.txt
 
