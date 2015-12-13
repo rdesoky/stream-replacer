@@ -1,0 +1,16 @@
+{
+  "name": "stream-replacer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "replacer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "strepl": "strepl.js"
+  },
+  "author": "Ramy Eldesoky",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
