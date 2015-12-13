@@ -6,7 +6,17 @@ A Stream transformer and command line utility to find and replace strings in str
 ### Sample usage:
 
 ```javascript
-process.stdin.pipe( require("stream-str-replace")(find, replace) ).pipe(process.stdout);
+var fs = require('fs');
+var streamStrReplace = require('stream-str-replace');
+
+process.stdin
+	.pipe( streamStrReplace('find', 'replace') )
+	.pipe( process.stdout );
+
+
+fs.createReadStream('package.json')
+	.pipe( streamStrReplace('MIT', 'GPL')
+	.pipe( fs.createWriteStream( 'package2.json' );
 
 ```
 
@@ -19,8 +29,9 @@ process.stdin.pipe( require("stream-str-replace")(find, replace) ).pipe(process.
 ```
 >npm install stream-str-replace -g
 
+>path | strepl
+
 >type myFile.txt | strepl find_text replace_text > myNewFile.txt
 
->path | strepl
 
 ```

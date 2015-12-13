@@ -1,6 +1,6 @@
 {
   "name": "stream-str-replace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "replacer.js",
   "scripts": {
@@ -12,5 +12,9 @@
   "author": "Ramy Eldesoky",
   "license": "MIT",
   "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdesoky/stream-str-replace.git"
   }
 }
