@@ -1,5 +1,5 @@
 {
-  "name": "stream-replacer",
+  "name": "stream-str-replace",
   "version": "1.0.0",
   "description": "",
   "main": "replacer.js",
