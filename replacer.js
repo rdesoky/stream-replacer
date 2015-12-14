@@ -16,16 +16,20 @@ function ReplaceTransformer(matcher, replace, opts) {
 }
 ReplaceTransformer.prototype = Object.create(Transform.prototype);
 
-ReplaceTransformer.prototype._transform = function (chunk, encoding, cb) {
+ReplaceTransformer.prototype._transform = function (chunk, encoding, next) {
 	var pieces = (this.buffer + chunk).split(this.matcher);
-	this.buffer = pieces.pop();
-	this.push(pieces.join(this.replace));
-	cb();
+    if(pieces.length>1){
+        this.push(pieces.join(this.replace));
+        this.buffer = '';
+    }else{
+        this.buffer = pieces.pop();
+    }
+	next();
 };
 
-ReplaceTransformer.prototype._flush = function (cb) {
+ReplaceTransformer.prototype._flush = function (next) {
 	this.push(this.buffer);
-	cb();
+	next();
 };
 
 module.exports = ReplaceTransformer;
