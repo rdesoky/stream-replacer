@@ -15,8 +15,8 @@ process.stdin
 
 
 fs.createReadStream('package.json')
-	.pipe( streamStrReplace('MIT', 'GPL')
-	.pipe( fs.createWriteStream( 'package2.json' );
+	.pipe( streamStrReplace('MIT', 'GPL') )
+	.pipe( fs.createWriteStream( 'package2.json' ) );
 
 ```
 
